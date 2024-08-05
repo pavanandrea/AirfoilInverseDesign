@@ -10,12 +10,13 @@
 using AirfoilInverseDesign;
 using Plots;
 
+
 #define the starting airfoil (a NACA-0009 with 100 nodes)
 (airfoil0,airfoil0header) = generatenaca4airfoil("0009", 100);
 
 #define the target pressure distribution from a set of 10 parameters
 #and evaluate it at the airfoil0 nodes
-params = tanh.([0.27, -0.79, 0.4, 1.8, -0.1, 0.04, -0.275, 3.3, 5.5, 0.175]);
+params = [0.263625, -0.658409, 0.379949, 0.946806, -0.099668, 0.039979, -0.268271, 0.997283, 0.999967, 0.173235];
 cptarget = cpgen10h(params, airfoil0[:,1]);
 
 #airfoil inverse design

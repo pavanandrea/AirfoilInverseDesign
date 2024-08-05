@@ -19,6 +19,15 @@
     Coordinates Database (Version 2.0, updated to 2021/12/10) using
     panel1, then it builds a CSV dataset of the pressure distributions.
 
+    ---
+
+    HOW TO RUN:
+    1) download the airfoil database from https://m-selig.ae.illinois.edu/ads/archives/coord_seligFmt.zip
+    2) extract it to dev/02_coord_seligFmt
+    3) run this script (it should work in Visual Studio Code with the Julia extension)
+
+    ---
+
     Author: Andrea Pavan
     Project: AirfoilInverseDesign.jl package
     License: MIT

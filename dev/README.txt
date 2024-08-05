@@ -1,4 +1,9 @@
-To run the script 02_cpgen08n_dataset_generation.jl:
-1) download the airfoil database from https://m-selig.ae.illinois.edu/ads/archives/coord_seligFmt.zip
-2) extract it to dev/02_coord_seligFmt
-3) run 02_cpgen08n_dataset_generation.jl (recommended to run in Visual Studio Code with Julia extension enabled)
+# Development Scripts and Experiments
+
+This folder contains development scripts and experiments used during the development of AirfoilInverseDesign.jl.
+These scripts are not part of the package's source code and are not intended to be used.
+The actual source code of the package is located in the "src" folder.
+
+## Notes:
+* These scripts are not guaranteed to work
+* They may contain incomplete, outdated or broken code

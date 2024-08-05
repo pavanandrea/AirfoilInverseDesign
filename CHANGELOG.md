@@ -1,5 +1,11 @@
 # AirfoilInverseDesign Development Changelog
 
+### Update 2024/08/05
+
+Enhancements:
+
+* Better documentation.
+
 ### Update 2023/12/31
 
 Enhancements:

@@ -1,6 +1,8 @@
 # AirfoilInverseDesign.jl
 
-AirfoilInverseDesign.jl is a Julia package that implements the Modified Garabedian-McFadden Method (MGM) for airfoil inverse design. The tool accepts a target pressure distribution as input and generates the corresponding airfoil geometry. It also embeds a parametrization of the pressure distribution, enabling the optimization of the airfoil geometry for a given application.
+AirfoilInverseDesign.jl is a Julia package that implements the Modified Garabedian-McFadden Method (MGM) for airfoil inverse design. The tool accepts a target pressure distribution as input and generates the corresponding airfoil geometry. It also includes a parametrization of the pressure distribution, allowing the airfoil geometry to be optimized for a particular application.
+
+![](docs/assets/readme_mgm_animation.gif)
 
 Features
 --------
@@ -37,7 +39,7 @@ using Plots;
 
 #define the target pressure distribution from a set of 10 parameters
 #and evaluate it at the airfoil0 nodes
-params = [0.27, -0.79, 0.4, 1.8, -0.1, 0.04, -0.275, 3.3, 5.5, 0.175];
+params = [0.263625, -0.658409, 0.379949, 0.946806, -0.099668, 0.039979, -0.268271, 0.997283, 0.999967, 0.173235];
 cptarget = cpgen10h(params, airfoil0[:,1]);
 
 #airfoil inverse design
@@ -92,7 +94,7 @@ Note that this example only takes a few minutes on an average desktop computer t
 |  NACA-4412 | 0.008053          | 49.7              | 0.008582          | 93.2              |
 |  Optimized | 0.007027          | 56.9 (+14.5%)     | 0.008169          | 97.9 (+5.1%)      |
 
-The resulting polar curve does not exhibit the classic "spike" that plagues airfoils optimized by traditional method. Instead, thanks to the flow-feature parametrization, it presents a wide plateau that facilitates the practical use of the airfoil and makes the design less sensitive to perturbations.
+The resulting polar curve does not exhibit the classic "spike" that plagues airfoils optimized by traditional methods. Instead, thanks to the flow-feature parametrization, it presents a wide plateau that facilitates the practical use of the airfoil and makes the design less sensitive to perturbations.
 Obviously the NACA-4412 performs better at high CL values, since the optimizer sacrificed efficiency outside the desired range.
 
 See example/airfoil_global_optimization.jl and example/airfoil_local_optimization.jl and the documentation for more details.
